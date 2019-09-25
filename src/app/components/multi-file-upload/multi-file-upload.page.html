@@ -1,11 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>MultiFileUpload</ion-title>
+    <ion-title>PDF a libro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-item>
-        <ion-input name="file" type="file" #filechooser multiple></ion-input>
-</ion-item>
+  <ion-item>
+    <ion-input name="file" mode="ios" accept="zip " [(ngModel)]="dataZip" id="file" ng2FileSelect  placeholder="Upload ZIP" type="file" class="">
+        <label for="file">><ion-icon name="images"></ion-icon>Testing</label>
+    </ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="transformPDF()">Cargar PDF </ion-button>
+
+  <ion-img src="../assets/download.png"></ion-img>
+
 </ion-content>

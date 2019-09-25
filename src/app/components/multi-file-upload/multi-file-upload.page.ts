@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultiFileUploadPage implements OnInit {
 
+  dataZip: any;
+  url;
   constructor() { }
-
   ngOnInit() {
   }
+  
+  transformPDF(){
+    debugger;
+    console.log(this.dataZip);
+    var reader = new FileReader();
+    reader.readAsDataURL(this.dataZip); 
+    reader.onload = (imageRender: any) => { 
+      var photosArray = imageRender.target.result;
+  }
+}
 
 }
