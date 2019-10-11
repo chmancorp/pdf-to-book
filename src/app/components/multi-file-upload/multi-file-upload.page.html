@@ -6,8 +6,9 @@
 
 <ion-content>
   <ion-item>
-    <ion-input name="file" mode="ios" accept="zip " [(ngModel)]="dataZip" id="file" ng2FileSelect  placeholder="Upload ZIP" type="file" class="">
-        <label for="file">><ion-icon name="images"></ion-icon>Testing</label>
+    <ion-input name="file" mode="ios" accept="zip " [(ngModel)]="dataZip" id="file" ng2FileSelect
+      placeholder="Upload ZIP" type="file" (change)="transformPDF($event)">
+      <label for="file">><ion-icon name="images"></ion-icon>Testing</label>
     </ion-input>
   </ion-item>
   <ion-button expand="block" (click)="transformPDF()">Cargar PDF </ion-button>
