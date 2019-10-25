@@ -1,17 +1,156 @@
-.fileInput {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+// .fileInput {
+//     width: 0.1px;
+//     height: 0.1px;
+//     opacity: 0;
+//     overflow: hidden;
+//     position: absolute;
+//     z-index: -1;
+// }
+
+.center {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
-.fileInput   label {
-    color: #717171;
-    background-color: black;
+
+.inputfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;    
+}
+
+// .inputfile::before {
+//     color: #717171;
+//     background-color: black;
+//     display: inline-block;
+//     cursor: pointer;
+//     padding: .5em 1em;
+//     border: 1px solid #ccc;
+//     cursor: pointer;
+//     content: 'Seleccionar ZIP';
+//     // display: inline-block;
+//     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+//     // border: 1px solid #999;
+//     // border-radius: 3px;
+//     // padding: 5px 8px;
+//     // outline: none;
+//     // white-space: nowrap;
+//     // -webkit-user-select: none;
+//     // cursor: pointer;
+//     // text-shadow: 1px 1px #fff;
+//     // font-weight: 700;
+//     // font-size: 10pt;
+//     visibility: visible;
+//     // position: absolute;
+// }
+
+// .inputfile:hover::before {
+//     border-color: black;
+// }
+
+// .inputfile:active::before {
+//     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+// }
+.inputfile + label {
+    // font-size: 1.25em;
+    // font-weight: 700;
+    // color: black;
+    // background-color: gray;
+    // display: inline-block;
+    content: 'Seleccionar ZIP';
     display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
     cursor: pointer;
-    padding: .5em 1em;
-    border: 1px solid #ccc;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+    visibility: visible;
+    position: absolute;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: gray;
+}
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.input-form {
+    font-size: 14px;
+    padding: 17px 25px;
+    // background: transparent;
+    border: none;
+    border-bottom: 1.5px solid #FFC600;
+  }
+  
+  .input-form:hover {
+    border-bottom: #000000;
+  }
+  
+  input[type=text]:disabled {
+    border-bottom: 1.5px solid #FFC600;
+    background-color: #f6f6f6;
+ //   background-image: url(#{$imgpath}/icon/padlock.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    // opacity: 0;
     cursor: pointer;
+  }
+  
+  .upload-field {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    line-height: 28px;
+    padding: 5px 10px;
+    border-bottom: 1.5px solid #FFC600;
+  //  background-image: url(#{$imgpath}/icon/warning-file.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  
+  .upload-file-button {
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFC600;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+  }
+@media (min-width: 990px) {
+    .imgmedia {
+        width: 50% !important;
+        height: 50% !important;
+    }
 }
